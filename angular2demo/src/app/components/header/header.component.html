@@ -1,0 +1,18 @@
+<p>
+  header works!
+</p>
+<input type="text" [(ngModel)]="task" (keyup)="funKeyup($event)"/>
+{{task}}
+<br />
+<h2>未完成列表</h2>
+<ul>
+  <li *ngFor="let item of taskUnfinish;let i=index">
+    <button (click)="funSetFinish(i)">完成</button>{{i}}:{{item}}<button (click)="funDelete('unfinish',i)">删除</button>
+  </li>
+</ul>
+<h2>完成列表</h2>
+<ul>
+  <li *ngFor="let item of taskFinish;let i=index">
+    <button (click)="funSetUnfinish(i)">未完成</button>{{i}}:{{item}}<button (click)="funDelete('finish',i)">删除</button>
+  </li>
+</ul>
