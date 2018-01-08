@@ -13,8 +13,8 @@ export class StorageService {
     return  JSON.parse(localStorage.getItem(key));
   }
   //删除本地数据
-  removeItem(key){
-    localStorage.removeItem(key);
+  removeItem(keys){
+    localStorage.removeItem(keys);
   }
 
 }
